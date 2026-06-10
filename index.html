@@ -1,0 +1,1112 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Cooperativa Rocinha Recicla — Transformando Resíduos em Oportunidade</title>
+<meta name="description" content="Cooperativa de reciclagem, coleta seletiva e logística reversa na Rocinha, Rio de Janeiro. Desde 2017 transformando resíduos em renda e inclusão social.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+<link rel="shortcut icon" href="Assets/favicon-rocinha-recicla.ico" type="image/x-icon">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- top sentinel for nav scroll state (no scroll listener) -->
+<div id="nav-sentinel" aria-hidden="true"></div>
+
+<!-- ============ NAVBAR ============ -->
+<header class="nav" id="nav" data-anim="nav">
+  <div class="nav__inner">
+    <a class="brand" href="#inicio" aria-label="Cooperativa Rocinha Recicla — início">
+      <span class="brand__mark" aria-hidden="true">
+        <img src="Assets/logo-cooperativa-rocinha-recicla.webp" alt="Logotipo oficial da Cooperativa Rocinha Recicla" width="40" height="40" class="brand__logo-img">
+      </span>
+      <span class="brand__text">
+        <strong>Rocinha Recicla</strong>
+        <em>Cooperativa</em>
+      </span>
+    </a>
+
+    <nav class="nav__links" aria-label="Navegação principal">
+      <a href="#inicio">Início</a>
+      <a href="#servicos">Serviços</a>
+      <a href="#sobre">Sobre</a>
+      <a href="#testemunhos">Depoimento</a>
+      <a href="#contato">Contato</a>
+    </nav>
+
+    <button class="nav__burger" id="burger" aria-label="Abrir menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+  <div class="nav__progress" id="nav-progress" aria-hidden="true"></div>
+</header>
+
+<!-- ============ HERO ============ -->
+<main>
+<section class="hero" id="inicio">
+  <div class="hero__video-wrapper" data-anim="hero-img">
+    <video class="hero__bg-video" autoplay loop muted playsinline>
+      <source src="Assets/video-logistica-reversa-cooperativa-rocinha.mp4" type="video/mp4">
+    </video>
+    <div class="hero__bg-overlay"></div>
+  </div>
+
+  <div class="hero__inner">
+    <div class="hero__text">
+      <p class="kicker" data-anim="hero" style="--d:0ms">Desde 2017 • Rocinha • Rio de Janeiro</p>
+      <h1 class="hero__title" data-anim="hero" style="--d:200ms">
+        Transformando <span class="hl">Resíduos</span><br class="hero__br-desktop">em Oportunidade
+      </h1>
+      <p class="hero__sub" data-anim="hero" style="--d:400ms">
+        Da Rocinha para o mundo. Coleta seletiva, triagem e logística reversa que geram
+        impacto ambiental real, renda e inclusão social.
+      </p>
+      <div class="hero__actions" data-anim="hero" style="--d:600ms">
+        <a class="btn btn--green" href="https://wa.me/5521997331428?text=Ol%C3%A1%2C%20vim%20atrav%C3%A9s%20do%20site%20e%20gostaria%20de%20uma%20informa%C3%A7%C3%A3o." target="_blank" rel="noopener">Agende sua coleta</a>
+        <a class="btn btn--ghost" href="#servicos">Nossos serviços</a>
+      </div>
+      <ul class="hero__chips" data-anim="hero" style="--d:750ms">
+        <li>Coleta Seletiva</li>
+        <li>Logística Reversa</li>
+        <li>Documentação Ambiental</li>
+      </ul>
+    </div>
+  </div>
+</section>
+</main>
+
+
+<!-- ============ PROBLEMA, SOLUÇÃO & RESULTADO (TRANSFORMAÇÃO ORGANIC / HUMANIST PREMIUM) ============ -->
+<section class="problem" id="problema">
+  <div class="problem__inner">
+
+    <!-- Cabeçalho -->
+    <div class="problem__head-grid">
+      <div class="problem__head-left">
+        <p class="section-tag problem__tag" data-anim="service">Da coleta ao certificado</p>
+        <h2 class="problem__h2" data-anim="service">Do descarte<br>ao <span class="hl-italic problem__hl">legado.</span></h2>
+      </div>
+      <div class="problem__head-right" data-anim="service">
+        <p class="problem__intro">Cada tonelada sem destino certo vira passivo na sua próxima auditoria. Aqui, vira certificação, renda e impacto real para quem mais precisa.</p>
+      </div>
+    </div>
+
+    <!-- Glass cards -->
+    <div class="glass-grid">
+
+      <article class="glass-card" data-anim="tile">
+        <div class="glass-card__icon" aria-hidden="true">
+          <svg viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="20" cy="20" r="19" stroke="currentColor" stroke-width="1.5" stroke-dasharray="4 3"/>
+            <path d="M14 20h12M20 14l6 6-6 6" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </div>
+        <span class="glass-card__num">01</span>
+        <span class="glass-card__label">O Gargalo</span>
+        <h3>Riscos Fiscais<br>e Desperdício</h3>
+        <p>Quando o resíduo não tem destino, quem paga são as encostas, as famílias e o seu balanço.</p>
+      </article>
+
+      <article class="glass-card glass-card--mid" data-anim="tile">
+        <div class="glass-card__icon" aria-hidden="true">
+          <svg viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="20" cy="20" r="19" stroke="currentColor" stroke-width="1.5" stroke-dasharray="4 3"/>
+            <path d="M13 20c0-3.866 3.134-7 7-7s7 3.134 7 7-3.134 7-7 7" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
+            <path d="M20 13v4M24 17l-4-4-4 4" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </div>
+        <span class="glass-card__num">02</span>
+        <span class="glass-card__label">O Canal</span>
+        <h3>Rastreabilidade<br>e Coleta</h3>
+        <p>Cada material coletado passa por triagem técnica no galpão da Rocinha e sai com rastreabilidade total para sua auditoria.</p>
+      </article>
+
+      <article class="glass-card glass-card--last" data-anim="tile">
+        <div class="glass-card__icon" aria-hidden="true">
+          <svg viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="20" cy="20" r="19" stroke="currentColor" stroke-width="1.5" stroke-dasharray="4 3"/>
+            <path d="M14 20.5l4 4 8-9" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </div>
+        <span class="glass-card__num">03</span>
+        <span class="glass-card__label">O Ativo</span>
+        <h3>Conformidade<br>e Impacto Social</h3>
+        <p>São os catadores cooperados da Rocinha que transformam seu resíduo em CDF, em renda e em impacto real para a comunidade.</p>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+<!-- ============ SERVIÇOS ============ -->
+<section class="services" id="servicos">
+  <div class="services__inner">
+
+    <div class="services__head">
+      <span class="services__eyebrow">Portfólio de Soluções</span>
+      <h2 class="services__title">Nove soluções.<br>Um ciclo <em>completo.</em></h2>
+    </div>
+
+    <!-- Grid principal — 6 visíveis (2 linhas × 3 colunas) -->
+    <div class="svc-grid">
+      <article class="svc-card" data-anim="tile">
+        <span class="svc-card__num">01</span>
+        <h3>Coleta Seletiva</h3>
+        <p>Roteiros dedicados para empresas, condomínios e eventos — frequência e horários adaptados à sua operação.</p>
+      </article>
+      <article class="svc-card" data-anim="tile">
+        <span class="svc-card__num">02</span>
+        <h3>Logística Reversa</h3>
+        <p>Gestão completa do retorno de embalagens pós-consumo, em conformidade com a PNRS e as exigências legais.</p>
+      </article>
+      <article class="svc-card" data-anim="tile">
+        <span class="svc-card__num">03</span>
+        <h3>Documentação Ambiental</h3>
+        <p>Emissão do CDF e relatórios técnicos prontos para auditorias de ESG, PNRS e certificações ambientais.</p>
+      </article>
+      <article class="svc-card" data-anim="tile">
+        <span class="svc-card__num">04</span>
+        <h3>Gestão para Empresas</h3>
+        <p>Diagnóstico e plano de gestão de resíduos para condomínios, comércios e órgãos públicos — do levantamento ao relatório.</p>
+      </article>
+      <article class="svc-card" data-anim="tile">
+        <span class="svc-card__num">05</span>
+        <h3>Triagem e Separação</h3>
+        <p>Processo técnico no galpão da Rocinha — cada material separado com precisão para maximizar seu valor de revenda.</p>
+      </article>
+      <article class="svc-card" data-anim="tile">
+        <span class="svc-card__num">06</span>
+        <h3>Destinação Adequada</h3>
+        <p>Cada material tem destino registrado e comprovado — do ponto de coleta ao processamento final.</p>
+      </article>
+    </div>
+
+    <!-- Serviços expandíveis — 3 restantes (1 linha) -->
+    <div class="services__extra" id="servicesExtra" aria-hidden="true">
+      <div class="svc-grid">
+        <article class="svc-card">
+          <span class="svc-card__num">07</span>
+          <h3>Comercialização de Recicláveis</h3>
+          <p>Fardos de alta qualidade fornecidos diretamente à indústria, gerando renda justa para os catadores cooperados.</p>
+        </article>
+        <article class="svc-card">
+          <span class="svc-card__num">08</span>
+          <h3>Educação Ambiental</h3>
+          <p>Programas de sensibilização para empresas, escolas e comunidades — porque descarte correto começa pela consciência.</p>
+        </article>
+        <article class="svc-card">
+          <span class="svc-card__num">09</span>
+          <h3>Inclusão Produtiva</h3>
+          <p>Projetos que transformam catadores em cooperados formalizados — renda, capacitação e dignidade na Rocinha.</p>
+        </article>
+      </div>
+    </div>
+
+    <!-- Botão Ver mais -->
+    <div class="services__footer">
+      <button class="services__toggle-btn" id="servicesToggle" aria-expanded="false" aria-controls="servicesExtra">
+        <span class="services__toggle-label">Ver todos os serviços</span>
+        <svg class="services__toggle-icon" viewBox="0 0 20 20" fill="none" aria-hidden="true">
+          <path d="M5 7.5L10 12.5L15 7.5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+      </button>
+    </div>
+
+  </div>
+</section>
+
+<!-- ============ GALERIA DE IMPACTO ============ -->
+<section class="gallery" id="impacto">
+  <div class="gallery__split">
+
+    <!-- Texto à esquerda -->
+    <div class="gallery__text" data-anim="hero" style="--d:0ms">
+      <span class="gallery__eyebrow">Impacto real</span>
+      <h2 class="gallery__title">O trabalho,<br><em>sem glamour.</em></h2>
+      <p class="gallery__lead">Cada fardo prensado é uma tonelada a menos em aterro — e renda gerada dentro da Rocinha.</p>
+      <div class="gallery__stats">
+        <div class="gallery__stat">
+          <span class="gallery__stat-num" data-target="450" data-prefix="+">0</span>
+          <span class="gallery__stat-label">Toneladas recicladas</span>
+        </div>
+        <div class="gallery__stat">
+          <span class="gallery__stat-num" data-target="35" data-prefix="+">0</span>
+          <span class="gallery__stat-label">Cooperados ativos</span>
+        </div>
+        <div class="gallery__stat">
+          <span class="gallery__stat-num" data-target="12" data-prefix="+">0</span>
+          <span class="gallery__stat-label">Empresas parceiras</span>
+        </div>
+      </div>
+      <p class="gallery__body">Nosso galpão na Rocinha opera com rastreabilidade total. Cada material coletado passa por triagem técnica, prensagem e destinação correta — gerando CDF, relatórios de ESG e, acima de tudo, dignidade para quem trabalha.</p>
+      <a href="https://wa.me/5521997331428?text=Ol%C3%A1%2C%20vim%20atrav%C3%A9s%20do%20site%20e%20gostaria%20de%20saber%20sobre%20Parceria." target="_blank" rel="noopener" class="gallery__cta">Quero ser parceiro</a>
+    </div>
+
+    <!-- Imagens à direita — alinhamento mantido -->
+    <div class="gallery__grid2">
+
+      <!-- Linha 1: landscape 1672×941 — aspect-ratio 16/9, zero crop -->
+      <figure class="gcard gcard--land" data-anim="tile">
+        <div class="gcard__img-wrap">
+          <img src="Assets/logistica-reversa-embalagens-empresas.webp"
+               alt="Logística reversa de embalagens coletadas de empresas parceiras" loading="lazy">
+        </div>
+        <figcaption>
+          <span class="gcard__tag">Logística reversa</span>
+          <span class="gcard__desc-text">Coleta nas empresas parceiras</span>
+        </figcaption>
+      </figure>
+
+      <figure class="gcard gcard--land" data-anim="tile">
+        <div class="gcard__img-wrap">
+          <img src="Assets/acao-educacao-ambiental-rocinha.webp"
+               alt="Ação de educação ambiental comunitária na Rocinha" loading="lazy">
+        </div>
+        <figcaption>
+          <span class="gcard__tag">Educação ambiental</span>
+          <span class="gcard__desc-text">Comunidade no centro da mudança</span>
+        </figcaption>
+      </figure>
+
+      <!-- Linha 2: portrait — aspect-ratio próximo ao natural de cada imagem -->
+      <figure class="gcard gcard--port" data-anim="tile">
+        <div class="gcard__img-wrap">
+          <img src="Assets/triagem-garrafas-pet-transparentes-rocinha.webp"
+               alt="Triagem manual de garrafas PET transparentes na Cooperativa Rocinha Recicla" loading="lazy">
+        </div>
+        <figcaption>
+          <span class="gcard__tag">Triagem</span>
+          <span class="gcard__desc-text">Separação por tipo e cor</span>
+        </figcaption>
+      </figure>
+
+      <figure class="gcard gcard--port" data-anim="tile">
+        <div class="gcard__img-wrap">
+          <img src="Assets/galpao-triagem-cooperativa-rocinha-recicla.webp"
+               alt="Galpão principal de triagem da Cooperativa Rocinha Recicla" loading="lazy">
+        </div>
+        <figcaption>
+          <span class="gcard__tag">Polo de triagem</span>
+          <span class="gcard__desc-text">Galpão próprio · Rocinha, RJ</span>
+        </figcaption>
+      </figure>
+
+    </div>
+  </section>
+
+<!-- ============ FARDOS — MATERIAIS RECICLADOS ============ -->
+<section class="fardos" id="fardos">
+
+  <div class="fardos__header">
+    <div>
+      <span class="fardos__eyebrow">Materiais reciclados</span>
+      <h2 class="fardos__title">Do resíduo<br>ao <em>recurso.</em></h2>
+    </div>
+    <p class="fardos__desc">Cada material coletado tem um caminho definido — triado, prensado e destinado corretamente pelo nosso polo na Rocinha.</p>
+  </div>
+
+  <div class="fardos__grid">
+
+    <article class="fcard" data-anim="tile">
+      <div class="fcard__img-wrap">
+        <img src="Assets/fardo-embalagens-papelao-reciclagem-rocinha.webp"
+             alt="Fardo de embalagens e papelão prensado" loading="lazy">
+      </div>
+      <div class="fcard__content" data-num="01">
+        <span class="fcard__tag">Papelão &amp; Papel</span>
+        <h3 class="fcard__title">Embalagens<br>Prensadas</h3>
+        <div class="fcard__steps">
+          <div class="fcard__step">
+            <span class="fcard__step-num">01.</span>
+            <span class="fcard__step-name">Triagem:</span>
+            <span class="fcard__step-desc">Separação por tipo e cor</span>
+          </div>
+          <div class="fcard__step">
+            <span class="fcard__step-num">02.</span>
+            <span class="fcard__step-name">Processo:</span>
+            <span class="fcard__step-desc">Compactação em fardos de 400kg</span>
+          </div>
+          <div class="fcard__step">
+            <span class="fcard__step-num">03.</span>
+            <span class="fcard__step-name">Retorno:</span>
+            <span class="fcard__step-desc">Vira papel kraft e novas embalagens</span>
+          </div>
+        </div>
+      </div>
+    </article>
+
+    <article class="fcard" data-anim="tile" style="--delay:.08s">
+      <div class="fcard__img-wrap">
+        <img src="Assets/fardo-garrafas-pet-coloridas-prensadas-rocinha.webp"
+             alt="Fardo de garrafas PET coloridas compactadas" loading="lazy">
+      </div>
+      <div class="fcard__content" data-num="02">
+        <span class="fcard__tag">PET Misto</span>
+        <h3 class="fcard__title">Garrafas<br>Compactadas</h3>
+        <div class="fcard__steps">
+          <div class="fcard__step">
+            <span class="fcard__step-num">01.</span>
+            <span class="fcard__step-name">Triagem:</span>
+            <span class="fcard__step-desc">Classificação por cor e tipo</span>
+          </div>
+          <div class="fcard__step">
+            <span class="fcard__step-num">02.</span>
+            <span class="fcard__step-name">Processo:</span>
+            <span class="fcard__step-desc">Prensagem de fardos até 500kg</span>
+          </div>
+          <div class="fcard__step">
+            <span class="fcard__step-num">03.</span>
+            <span class="fcard__step-name">Retorno:</span>
+            <span class="fcard__step-desc">Transformação em fibra têxtil</span>
+          </div>
+        </div>
+      </div>
+    </article>
+
+    <article class="fcard" data-anim="tile" style="--delay:.16s">
+      <div class="fcard__img-wrap">
+        <img src="Assets/fardo-plastico-hdpe-azul-reciclado-rocinha.webp"
+             alt="Fardo de plástico HDPE azul enfardado" loading="lazy">
+      </div>
+      <div class="fcard__content" data-num="03">
+        <span class="fcard__tag">HDPE — Rígido</span>
+        <h3 class="fcard__title">Plástico Rígido<br>Enfardado</h3>
+        <div class="fcard__steps">
+          <div class="fcard__step">
+            <span class="fcard__step-num">01.</span>
+            <span class="fcard__step-name">Triagem:</span>
+            <span class="fcard__step-desc">Separação de baldes e tubos</span>
+          </div>
+          <div class="fcard__step">
+            <span class="fcard__step-num">02.</span>
+            <span class="fcard__step-name">Processo:</span>
+            <span class="fcard__step-desc">Enfardamento por polímero puro</span>
+          </div>
+          <div class="fcard__step">
+            <span class="fcard__step-num">03.</span>
+            <span class="fcard__step-name">Retorno:</span>
+            <span class="fcard__step-desc">Reutilizado em saneamento e obras</span>
+          </div>
+        </div>
+      </div>
+    </article>
+
+    <article class="fcard" data-anim="tile" style="--delay:.24s">
+      <div class="fcard__img-wrap">
+        <img src="Assets/fardo-plasticos-vermelhos-prensados-rocinha.webp"
+             alt="Fardo de plásticos vermelhos domésticos triados" loading="lazy">
+      </div>
+      <div class="fcard__content" data-num="04">
+        <span class="fcard__tag">PP / PS — Utensílios</span>
+        <h3 class="fcard__title">Plásticos<br>Domésticos</h3>
+        <div class="fcard__steps">
+          <div class="fcard__step">
+            <span class="fcard__step-num">01.</span>
+            <span class="fcard__step-name">Triagem:</span>
+            <span class="fcard__step-desc">Seleção manual de utilidades</span>
+          </div>
+          <div class="fcard__step">
+            <span class="fcard__step-num">02.</span>
+            <span class="fcard__step-name">Processo:</span>
+            <span class="fcard__step-desc">Prensagem de lotes triados</span>
+          </div>
+          <div class="fcard__step">
+            <span class="fcard__step-num">03.</span>
+            <span class="fcard__step-name">Retorno:</span>
+            <span class="fcard__step-desc">Vira novos mobiliários e peças</span>
+          </div>
+        </div>
+      </div>
+    </article>
+
+  </div>
+
+</section>
+
+<!-- ============ SEPARADOR EDITORIAL ============ -->
+<div class="section-divider" aria-hidden="true">
+  <span class="section-divider__line"></span>
+  <span class="section-divider__icon">♻</span>
+  <span class="section-divider__line"></span>
+</div>
+
+<!-- ============ QUEM SOMOS ============ -->
+<section class="about" id="sobre">
+  <div class="about__inner">
+    <!-- Imagem apenas no DESKTOP -->
+    <figure class="about__media about__media--desktop">
+      <img src="Assets/equipe-cooperados-trabalho-comunitario.webp"
+           alt="Equipe de cooperados da Cooperativa Rocinha Recicla sorrindo e trabalhando no processo de triagem e enfardamento de recicláveis"
+           width="1672" height="941" loading="lazy">
+    </figure>
+    <div class="about__content">
+      <span class="about__eyebrow">Quem somos</span>
+      <h2>Nascemos da Rocinha. Para resolver de <em>verdade.</em></h2>
+      
+      <!-- Imagem apenas no MOBILE -->
+      <figure class="about__media about__media--mobile">
+        <img src="Assets/equipe-cooperados-trabalho-comunitario.webp"
+             alt="Equipe de cooperados da Cooperativa Rocinha Recicla sorrindo e trabalhando no processo de triagem e enfardamento de recicláveis"
+             width="1672" height="941" loading="lazy">
+      </figure>
+
+      <p class="about__lead">
+        A Cooperativa Rocinha Recicla atua na coleta seletiva, triagem e destinação correta
+        de resíduos — promovendo impacto ambiental positivo, geração de renda e inclusão
+        social. Ao longo dos anos, ampliamos parcerias com empresas e órgãos públicos,
+        levando seriedade institucional a um trabalho que começou na base da comunidade.
+      </p>
+      <div class="about__counters" id="counters">
+        <div class="about__counter">
+          <span class="about__counter-num" data-target="9" data-prefix="+">0</span>
+          <span class="about__counter-label">Anos</span>
+        </div>
+        <div class="about__counter-divider" aria-hidden="true"></div>
+        <div class="about__counter">
+          <span class="about__counter-num" data-target="2017" data-plain="1">0</span>
+          <span class="about__counter-label">Desde</span>
+        </div>
+        <div class="about__counter-divider" aria-hidden="true"></div>
+        <div class="about__counter">
+          <span class="about__counter-num" data-target="15" data-prefix="+">0</span>
+          <span class="about__counter-label">Serviços</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- ============ TESTEMUNHOS ============ -->
+<section class="testimonials" id="testemunhos">
+  <div class="testimonials__bg-pattern" aria-hidden="true"></div>
+
+  <div class="testimonials__inner">
+    <div class="testimonials__head">
+      <span class="testimonials__eyebrow">Histórias reais</span>
+      <h2 class="testimonials__title">Vozes que<br><em>transformam</em> a Rocinha.</h2>
+      <p class="testimonials__sub">Pessoas que vivem, trabalham e acreditam nessa história.</p>
+    </div>
+
+    <!-- Carrossel -->
+    <div class="tcarousel" id="tcarousel" aria-label="Carrossel de testemunhos">
+      <div class="tcarousel__track-wrap">
+      <div class="tcarousel__track" id="tcarousel-track">
+
+        <article class="tcard">
+          <div class="tcard__quote-mark" aria-hidden="true">"</div>
+          <blockquote>
+            <p>Acompanho e admiro o trabalho da Cooperativa Rocinha Recicla, porque ela representa muito mais do que reciclagem. Representa criatividade, empreendedorismo, compromisso social e a capacidade de transformar desafios em oportunidades.</p>
+            <p>Aqui, reciclagem não é apenas destino de materiais — é geração de oportunidades, fortalecimento dos catadores e construção de comunidade. Mais do que gerenciar resíduos, a Rocinha Recicla ajuda a construir dignidade, oportunidades e futuro.</p>
+          </blockquote>
+          <footer class="tcard__footer">
+            <div class="tcard__avatar" aria-hidden="true">JM</div>
+            <div class="tcard__info">
+              <strong class="tcard__name">José Maria de Mesquita Jr.</strong>
+              <span class="tcard__role">Coordenador do Comitê de Resíduos Sólidos<br>PISTA Rocinha</span>
+            </div>
+          </footer>
+        </article>
+
+        <article class="tcard tcard--featured">
+          <div class="tcard__quote-mark" aria-hidden="true">"</div>
+          <blockquote>
+            <p>Minha experiência com a cooperativa foi transformadora. Eu estava desempregada, com filhos pequenos e aluguel para pagar, quando ouvi falar sobre a Cooperativa Rocinha Recicla e decidi conhecer o trabalho realizado.</p>
+            <p>Ao chegar lá, conheci os administradores, que me deram a oportunidade de trabalhar com eles. Trabalho até hoje na mesma cooperativa que me acolheu anos atrás e sou muito grata por fazer parte desse trabalho incrível, que transforma vidas.</p>
+          </blockquote>
+          <footer class="tcard__footer">
+            <div class="tcard__avatar" aria-hidden="true">LE</div>
+            <div class="tcard__info">
+              <strong class="tcard__name">Letícia</strong>
+              <span class="tcard__role">Moradora da Rocinha e colaboradora<br>da Cooperativa Rocinha Recicla</span>
+            </div>
+          </footer>
+        </article>
+
+        <article class="tcard">
+          <div class="tcard__quote-mark" aria-hidden="true">"</div>
+          <blockquote>
+            <p>Quando cheguei à cooperativa, estava em situação de vulnerabilidade social. Graças a Deus e ao apoio que encontrei aqui, minha vida começou a mudar.</p>
+            <p>A Rocinha Recicla me ajudou não apenas a me reintegrar ao mercado de trabalho, mas também a superar o momento difícil em que eu me encontrava. Hoje sou cooperado e tenho muito orgulho de fazer parte dessa história.</p>
+          </blockquote>
+          <footer class="tcard__footer">
+            <div class="tcard__avatar" aria-hidden="true">LU</div>
+            <div class="tcard__info">
+              <strong class="tcard__name">Luciano Manoel de Mendonça Silva</strong>
+              <span class="tcard__role">Cooperado da Rocinha Recicla</span>
+            </div>
+          </footer>
+        </article>
+
+        <article class="tcard tcard--featured">
+          <div class="tcard__quote-mark" aria-hidden="true">"</div>
+          <blockquote>
+            <p>A Cooperativa Rocinha Recicla teve um papel fundamental na nossa trajetória, contribuindo com conhecimento, orientação em gestão de negócios e proporcionando um ambiente de colaboração onde desenvolvemos nossas atividades em parceria.</p>
+            <p>Esse apoio foi essencial para o crescimento e a consolidação do Eco Digital. Somos muito gratos pela excelência dos serviços prestados e pela parceria sólida que se fortalece a cada dia. Juntos, seguimos gerando impacto social, ambiental e oportunidades para a Rocinha.</p>
+          </blockquote>
+          <footer class="tcard__footer">
+            <div class="tcard__avatar" aria-hidden="true">GR</div>
+            <div class="tcard__info">
+              <strong class="tcard__name">Gelson Rodrigues</strong>
+              <span class="tcard__role">Fundador do Eco Digital<br>Gestão e reciclagem de resíduos eletrônicos</span>
+            </div>
+          </footer>
+        </article>
+
+      </div><!-- /.tcarousel__track -->
+      </div><!-- /.tcarousel__track-wrap -->
+
+      <!-- Controles -->
+      <div class="tcarousel__controls">
+        <button class="tcarousel__btn" id="tcarousel-prev" aria-label="Anterior">
+          <svg width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M12 4l-6 6 6 6" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </button>
+        <div class="tcarousel__dots" id="tcarousel-dots"></div>
+        <button class="tcarousel__btn" id="tcarousel-next" aria-label="Próximo">
+          <svg width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M8 4l6 6-6 6" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </button>
+      </div>
+
+    </div><!-- /.tcarousel -->
+  </div>
+</section>
+
+<!-- ============ FAQ ============ -->
+<section class="faq" id="faq">
+  <div class="faq__head">
+    <span class="faq__eyebrow">Perguntas frequentes</span>
+    <h2 class="faq__title">Tudo que você precisa saber<br>antes de fechar <em>parceria.</em></h2>
+  </div>
+  <div class="faq__list">
+    <details class="acc">
+      <summary>Como funciona a coleta seletiva da cooperativa?<span class="acc__icon" aria-hidden="true"></span></summary>
+      <div class="acc__body"><p>Definimos juntos os pontos, a frequência e os tipos de material. Nossa equipe recolhe, transporta e leva tudo ao polo de triagem, onde o material é separado e enfardado para destinação correta.</p></div>
+    </details>
+    <details class="acc">
+      <summary>Como minha empresa ou condomínio fecha uma parceria?<span class="acc__icon" aria-hidden="true"></span></summary>
+      <div class="acc__body"><p>Basta enviar uma mensagem pelo formulário ou WhatsApp. Avaliamos o volume e o tipo de resíduo, montamos um plano de coleta e formalizamos a parceria — com documentação ambiental inclusa.</p></div>
+    </details>
+    <details class="acc">
+      <summary>O que é logística reversa e como vocês operam?<span class="acc__icon" aria-hidden="true"></span></summary>
+      <div class="acc__body"><p>É o retorno de embalagens e resíduos pós-consumo ao ciclo produtivo. Operamos a coleta, a triagem e a destinação desses materiais conforme a Política Nacional de Resíduos Sólidos.</p></div>
+    </details>
+    <details class="acc">
+      <summary>Vocês emitem documentação ambiental?<span class="acc__icon" aria-hidden="true"></span></summary>
+      <div class="acc__body"><p>Sim. Emitimos relatórios e comprovantes de destinação que ajudam sua empresa em auditorias, relatórios de ESG e cumprimento de obrigações ambientais.</p></div>
+    </details>
+    <details class="acc">
+      <summary>Qual é a área de atendimento?<span class="acc__icon" aria-hidden="true"></span></summary>
+      <div class="acc__body"><p>Atendemos a Rocinha, o entorno e diversas regiões do Rio de Janeiro. Para coletas fora da área, fale conosco para avaliarmos a logística.</p></div>
+    </details>
+    <details class="acc">
+      <summary>Vocês fazem coleta em eventos?<span class="acc__icon" aria-hidden="true"></span></summary>
+      <div class="acc__body"><p>Fazemos. Montamos a coleta seletiva do evento, do planejamento à destinação, e entregamos o relatório de impacto ao final.</p></div>
+    </details>
+  </div>
+</section>
+
+<!-- ============ LOCALIZAÇÃO (EDITORIAL PREMIUM) ============ -->
+<section class="location" id="localizacao">
+  <div class="location__inner">
+    
+    <!-- Cabeçalho Editorial -->
+    <div class="location__header" data-anim="service">
+      <div class="location__header-left">
+        <span class="location__eyebrow">Onde estamos</span>
+        <h2 class="location__title">Nossa sede<br>no coração da <em>Rocinha.</em></h2>
+      </div>
+      <div class="location__header-right">
+        <p class="location__intro">
+          Estrutura técnica e galpão de triagem preparados para atender a logística reversa de grandes corporações e receber visitas para auditorias de ESG.
+        </p>
+      </div>
+    </div>
+
+    <!-- Grid de Informações de Contato Rápidas -->
+    <div class="location__grid-info" data-anim="tile">
+      <div class="location__info-col">
+        <div class="location__info-icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+        </div>
+        <h3>Endereço</h3>
+        <p><a href="https://www.google.com/maps/dir//Complexo+Esportivo+da+Rocinha+-+R.+Bertha+Lutz,+84+-+Rocinha,+Rio+de+Janeiro+-+RJ,+22450-290" target="_blank" rel="noopener">Rua Bertha Lutz, 84<br>Rocinha, Rio de Janeiro — RJ</a></p>
+      </div>
+      
+      <div class="location__info-col">
+        <div class="location__info-icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/></svg>
+        </div>
+        <h3>Fale Conosco</h3>
+        <p>
+          <a href="https://wa.me/5521997331428?text=Ol%C3%A1%2C%20vim%20atrav%C3%A9s%20do%20site%20e%20gostaria%20de%20uma%20informa%C3%A7%C3%A3o." target="_blank" rel="noopener" class="hl-link">(21) 99733-1428 (WhatsApp)</a><br>
+          <a href="mailto:rocinharecicla@gmail.com">rocinharecicla@gmail.com</a>
+        </p>
+      </div>
+
+      <div class="location__info-col">
+        <div class="location__info-icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+        </div>
+        <h3>Horário</h3>
+        <p>Segunda a Sexta: 08h às 17h<br>Sábado: 08h às 12h</p>
+      </div>
+    </div>
+
+    <!-- Container do Mapa Panorâmico -->
+    <div class="location__map-wrapper" data-anim="tile">
+      <iframe
+        title="Mapa da Sede da Cooperativa Rocinha Recicla na Rua Bertha Lutz, 84"
+        src="https://maps.google.com/maps?q=R.%20Bertha%20Lutz,%2084%20-%20Rocinha,%20Rio%20de%20Janeiro%20-%20RJ,%2022450-290&t=&z=15&ie=UTF8&iwloc=&output=embed"
+        loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+      
+      <!-- Botão Flutuante Elegante -->
+      <a class="location__map-btn" href="https://www.google.com/maps/dir//Complexo+Esportivo+da+Rocinha+-+R.+Bertha+Lutz,+84+-+Rocinha,+Rio+de+Janeiro+-+RJ,+22450-290" target="_blank" rel="noopener">
+        <span>Traçar rota no Google Maps</span>
+        <svg viewBox="0 0 20 20" fill="currentColor" width="16" height="16"><path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd" /></svg>
+      </a>
+    </div>
+
+  </div>
+</section>
+
+<!-- ============ CTA + FORMULÁRIO ============ -->
+<section class="contact" id="contato">
+  <div class="contact__inner">
+    <div class="contact__pitch">
+      <span class="section-tag">Contato &amp; Parcerias</span>
+      <h2>Seja um <em>parceiro</em><br>ou agende sua coleta.</h2>
+      <p class="contact__subtitle">Entre em contato para estruturar o plano de descarte e destinação ideal para o seu negócio.</p>
+      
+      <div class="contact__features">
+        <div class="contact__feature-item">
+          <span class="contact__feature-icon" aria-hidden="true">✓</span>
+          <div class="contact__feature-text">
+            <strong>Rastreabilidade Total (CDF)</strong>
+            <p>Emissão de relatórios técnicos e Certificado de Destinação Final pronto para auditorias de ESG.</p>
+          </div>
+        </div>
+        <div class="contact__feature-item">
+          <span class="contact__feature-icon" aria-hidden="true">✓</span>
+          <div class="contact__feature-text">
+            <strong>Logística Customizada</strong>
+            <p>Roteiros e frequências de coleta adaptados ao volume e à rotina da sua operação.</p>
+          </div>
+        </div>
+        <div class="contact__feature-item">
+          <span class="contact__feature-icon" aria-hidden="true">✓</span>
+          <div class="contact__feature-text">
+            <strong>Impacto Socioambiental</strong>
+            <p>Seu resíduo gera renda direta, capacitação e dignidade para catadores cooperados da Rocinha.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <form class="form" id="form" novalidate>
+      <div class="field">
+        <label for="nome">Nome <span>*</span></label>
+        <input type="text" id="nome" name="nome" required placeholder="Seu nome">
+        <small class="field__error">Informe seu nome.</small>
+      </div>
+      <div class="field">
+        <label for="empresa">Empresa / Condomínio</label>
+        <input type="text" id="empresa" name="empresa" placeholder="Opcional">
+      </div>
+      <div class="field">
+        <label for="telefone">Telefone / WhatsApp <span>*</span></label>
+        <input type="tel" id="telefone" name="telefone" required placeholder="(21) 90000-0000">
+        <small class="field__error">Informe um telefone válido.</small>
+      </div>
+      <div class="field">
+        <label for="tipo">Tipo de parceria <span>*</span></label>
+        <select id="tipo" name="tipo" required>
+          <option value="" selected disabled>Selecione…</option>
+          <option>Condomínio</option>
+          <option>Empresa / Comércio</option>
+          <option>Evento</option>
+          <option>Órgão Público</option>
+          <option>Coleta pontual</option>
+          <option>Outro</option>
+        </select>
+        <small class="field__error">Selecione uma opção.</small>
+      </div>
+      <div class="field field--full">
+        <label for="email">E-mail <span>*</span></label>
+        <input type="email" id="email" name="email" required placeholder="voce@email.com">
+        <small class="field__error">Informe um e-mail válido.</small>
+      </div>
+      <div class="field field--full">
+        <label for="mensagem">Mensagem</label>
+        <textarea id="mensagem" name="mensagem" rows="4" placeholder="Volume estimado, tipo de resíduo, frequência…"></textarea>
+      </div>
+      <div class="field field--full">
+        <button type="submit" class="btn btn--amber btn--block">Enviar mensagem</button>
+        <p class="form__success" id="form-success" hidden>✓ Mensagem pronta! Obrigado — entraremos em contato em breve.</p>
+      </div>
+    </form>
+  </div>
+</section>
+
+<!-- ============ RODAPÉ ============ -->
+<footer class="footer">
+
+  <!-- Seção principal: 4 colunas -->
+  <div class="footer-main">
+    <div class="footer-container">
+
+      <!-- Coluna 1: Marca -->
+      <div class="footer-brand">
+        <div class="footer-logo">
+          <img src="Assets/logo-cooperativa-rocinha-recicla.webp" alt="Logotipo da Cooperativa Rocinha Recicla" width="180" height="auto">
+        </div>
+        <p class="footer-brand__desc">Transformando resíduos em oportunidade — coleta, triagem e impacto social da Rocinha para o mundo.</p>
+        <p class="footer-brand__cnpj">CNPJ 28.695.111/0001-89</p>
+        <div class="footer-social">
+          <a href="https://www.instagram.com/rocinharecicla/" target="_blank" rel="noopener noreferrer" aria-label="Instagram da Cooperativa Rocinha Recicla">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg>
+          </a>
+        </div>
+      </div>
+
+      <!-- Coluna 2: Navegação -->
+      <div class="footer-links">
+        <h4>Navegação</h4>
+        <ul>
+          <li><a href="#inicio">Início</a></li>
+          <li><a href="#servicos">Serviços</a></li>
+          <li><a href="#sobre">Sobre</a></li>
+          <li><a href="#testemunhos">Depoimento</a></li>
+          <li><a href="#contato">Contato</a></li>
+        </ul>
+      </div>
+
+      <!-- Coluna 3: Especialidades -->
+      <div class="footer-links">
+        <h4>Especialidades</h4>
+        <ul>
+          <li><a href="#servicos">Coleta Seletiva</a></li>
+          <li><a href="#servicos">Logística Reversa</a></li>
+          <li><a href="#servicos">Documentação Ambiental</a></li>
+          <li><a href="#servicos">Gestão para Empresas</a></li>
+          <li><a href="#servicos">Triagem e Separação</a></li>
+        </ul>
+      </div>
+
+      <!-- Coluna 4: Contato (ordem obrigatória per Skill) -->
+      <div class="footer-contact">
+        <h4>Contato</h4>
+        <ul>
+          <li>
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M9 9h.01M15 9h.01M9 15h6"/></svg>
+            <a href="https://g.co/kgs/rocinharecicla" target="_blank" rel="noopener noreferrer">Cooperativa Rocinha Recicla</a>
+          </li>
+          <li>
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+            <a href="https://www.google.com/maps/dir//Complexo+Esportivo+da+Rocinha+-+R.+Bertha+Lutz,+84+-+Rocinha,+Rio+de+Janeiro+-+RJ,+22450-290" target="_blank" rel="noopener noreferrer">R. Bertha Lutz, 84 — Rocinha, RJ</a>
+          </li>
+          <li>
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/></svg>
+            <a href="https://wa.me/5521997331428?text=Ol%C3%A1%2C%20vim%20atrav%C3%A9s%20do%20site%20e%20gostaria%20de%20uma%20informa%C3%A7%C3%A3o." target="_blank" rel="noopener noreferrer">(21) 99733-1428</a>
+          </li>
+          <li>
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+            <a href="mailto:rocinharecicla@gmail.com">rocinharecicla@gmail.com</a>
+          </li>
+        </ul>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- Seção de créditos -->
+  <div class="footer-bottom">
+    <div class="footer-container footer-container--bottom">
+      <div class="footer-credits-left">
+        <p class="footer-copyright">© 2026 Cooperativa Rocinha Recicla. Todos os direitos reservados.</p>
+        <div class="footer-legal-links">
+          <a href="#" id="ck-prefs-link" class="ck-footer-link">
+            <svg id="cookie-toggle" class="ck-footer-icon" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+              <path d="M8 1.5L2 4v4c0 3.3 2.5 5.7 6 6.5 3.5-.8 6-3.2 6-6.5V4L8 1.5z" stroke="currentColor" stroke-width="1.2" stroke-linejoin="round"/>
+              <path class="ck-shield-check" d="M5.5 8l2 2 3-3" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+            Cookies
+          </a>
+          <span aria-hidden="true">|</span>
+          <a href="termos-e-condicoes.html">Termos e Condições</a>
+          <span aria-hidden="true">|</span>
+          <a href="politica-de-privacidade.html">Política de Privacidade</a>
+        </div>
+      </div>
+      <div class="footer-credits-right">
+        Desenvolvido por <a href="https://www.atsaconsultoria.com.br" target="_blank" rel="noopener noreferrer">ATSA Consultoria</a>
+      </div>
+    </div>
+  </div>
+
+</footer>
+
+<!-- ============ DRAWER MOBILE PREMIUM ============ -->
+<div class="drawer" id="drawer" aria-hidden="true" role="dialog" aria-modal="true" aria-labelledby="drawer-title">
+  <div class="drawer__overlay" id="drawer-overlay"></div>
+  <div class="drawer__content">
+    <div class="drawer__header">
+      <a class="brand brand--drawer" href="#inicio" aria-label="Cooperativa Rocinha Recicla — início">
+        <span class="brand__mark" aria-hidden="true">
+          <img src="Assets/logo-cooperativa-rocinha-recicla-mobile.webp" alt="Logotipo oficial" width="40" height="40">
+        </span>
+        <span class="brand__text">
+          <strong id="drawer-title">Rocinha Recicla</strong>
+          <em>Cooperativa</em>
+        </span>
+      </a>
+      <button class="drawer__close" id="drawer-close" aria-label="Fechar menu">
+        <svg viewBox="0 0 24 24" width="28" height="28" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round">
+          <line x1="18" y1="6" x2="6" y2="18"></line>
+          <line x1="6" y1="6" x2="18" y2="18"></line>
+        </svg>
+      </button>
+    </div>
+    
+    <nav class="drawer__nav" aria-label="Navegação móvel">
+      <a href="#inicio" class="drawer__link" style="--i: 1">Início</a>
+      <a href="#servicos" class="drawer__link" style="--i: 2">Serviços</a>
+      <a href="#sobre" class="drawer__link" style="--i: 3">Sobre</a>
+      <a href="#testemunhos" class="drawer__link" style="--i: 4">Depoimento</a>
+      <a href="#contato" class="drawer__link" style="--i: 5">Contato</a>
+    </nav>
+    
+    <div class="drawer__footer">
+      <div class="drawer__social" style="--i: 6">
+        <a href="https://wa.me/5521997331428?text=Ol%C3%A1%2C%20vim%20atrav%C3%A9s%20do%20site%20e%20gostaria%20de%20uma%20informa%C3%A7%C3%A3o." target="_blank" rel="noopener">
+          <span class="drawer__social-icon">💬</span> (21) 99733-1428
+        </a>
+        <a href="https://www.instagram.com/rocinharecicla/" target="_blank" rel="noopener">
+          <span class="drawer__social-icon">📷</span> @rocinharecicla
+        </a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script src="script.js"></script>
+
+<!-- ============ COOKIE BANNER LGPD ============ -->
+<div id="ck-banner" class="ck-banner" role="region" aria-labelledby="ck-banner-title" aria-describedby="ck-banner-description" aria-live="polite" aria-hidden="true">
+  <div class="ck-banner__inner">
+    <div class="ck-banner__content">
+      <h2 id="ck-banner-title" class="ck-banner__title">Privacidade e transparência são prioridades para nós</h2>
+      <p id="ck-banner-description" class="ck-banner__text">
+        Utilizamos cookies para melhorar sua experiência de navegação e entender o desempenho da plataforma.
+        Você pode aceitar todos ou personalizar suas preferências.
+        <a href="politica-de-privacidade.html" class="ck-banner__link">Política de Privacidade</a>.
+      </p>
+    </div>
+    <div class="ck-banner__actions">
+      <button id="ck-customize" class="ck-btn ck-btn--ghost">Personalizar</button>
+      <button id="ck-reject" class="ck-btn ck-btn--outline">Rejeitar</button>
+      <button id="ck-accept-all" class="ck-btn ck-btn--primary">Aceitar todos</button>
+    </div>
+  </div>
+</div>
+
+<!-- Modal de Preferências -->
+<div id="ck-modal" class="ck-modal" role="dialog" aria-modal="true" aria-labelledby="ck-modal-title" aria-describedby="ck-modal-description" aria-hidden="true">
+  <div class="ck-modal__overlay" id="ck-modal-overlay"></div>
+  <div class="ck-modal__box">
+    <div class="ck-modal__header">
+      <h2 id="ck-modal-title" class="ck-modal__title">Personalizar preferências de consentimento</h2>
+      <button class="ck-modal__close" id="ck-modal-close" aria-label="Fechar modal">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+          <path d="M18 6L6 18M6 6l12 12" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+      </button>
+    </div>
+    <section class="ck-modal__body">
+      <p id="ck-modal-description" class="ck-modal__intro">
+        Os cookies <strong>"Necessário"</strong> são essenciais para o funcionamento do site e não podem ser desativados.
+      </p>
+      <div class="ck-categories">
+        <div class="ck-category">
+          <div class="ck-category__header">
+            <div class="ck-category__info">
+              <h3 class="ck-category__name">Necessário</h3>
+              <p class="ck-category__desc">Essenciais para navegação, segurança e funcionamento básico da plataforma.</p>
+            </div>
+            <span class="ck-category__badge">Sempre ativo</span>
+          </div>
+        </div>
+        <div class="ck-category">
+          <div class="ck-category__header">
+            <div class="ck-category__info">
+              <h3 class="ck-category__name">Funcional</h3>
+              <p class="ck-category__desc">Permitem funcionalidades como compartilhamento em redes sociais e recursos de terceiros.</p>
+            </div>
+            <label class="ck-toggle" aria-label="Ativar cookies funcionais">
+              <input type="checkbox" id="ck-functional" name="functional">
+              <span class="ck-toggle__slider"></span>
+            </label>
+          </div>
+        </div>
+        <div class="ck-category">
+          <div class="ck-category__header">
+            <div class="ck-category__info">
+              <h3 class="ck-category__name">Analítico</h3>
+              <p class="ck-category__desc">Usados para entender como os visitantes interagem com o site.</p>
+            </div>
+            <label class="ck-toggle" aria-label="Ativar cookies analíticos">
+              <input type="checkbox" id="ck-analytics" name="analytics">
+              <span class="ck-toggle__slider"></span>
+            </label>
+          </div>
+        </div>
+        <div class="ck-category">
+          <div class="ck-category__header">
+            <div class="ck-category__info">
+              <h3 class="ck-category__name">Desempenho</h3>
+              <p class="ck-category__desc">Analisam índices de desempenho do site para oferecer melhor experiência.</p>
+            </div>
+            <label class="ck-toggle" aria-label="Ativar cookies de desempenho">
+              <input type="checkbox" id="ck-performance" name="performance">
+              <span class="ck-toggle__slider"></span>
+            </label>
+          </div>
+        </div>
+        <div class="ck-category">
+          <div class="ck-category__header">
+            <div class="ck-category__info">
+              <h3 class="ck-category__name">Publicidade</h3>
+              <p class="ck-category__desc">Entregam anúncios personalizados com base nas páginas visitadas anteriormente.</p>
+            </div>
+            <label class="ck-toggle" aria-label="Ativar cookies de publicidade">
+              <input type="checkbox" id="ck-advertising" name="advertising">
+              <span class="ck-toggle__slider"></span>
+            </label>
+          </div>
+        </div>
+      </div>
+    </section>
+    <div class="ck-modal__footer">
+      <button id="ck-modal-reject" class="ck-btn ck-btn--outline">Rejeitar</button>
+      <button id="ck-modal-save" class="ck-btn ck-btn--ghost">Salvar Preferências</button>
+      <button id="ck-modal-accept-all" class="ck-btn ck-btn--primary">Aceitar todos</button>
+    </div>
+  </div>
+</div>
+
+<div id="ck-live-region" class="sr-only" aria-live="polite" aria-atomic="true"></div>
+<!-- WhatsApp Premium Experience -->
+<div class="wa-premium-container">
+    <!-- Balão de Mensagem Glassmorphism -->
+    <div id="wa-message-bubble" class="wa-bubble">
+        <button class="wa-close" id="wa-close-btn" aria-label="Fechar">
+            <i class="fa-solid fa-xmark"></i>
+        </button>
+        
+        <div class="wa-content">
+            <div class="wa-header">
+                <div class="wa-avatar-wrapper">
+                    <img src="Assets/logo-cooperativa-rocinha-recicla.webp" alt="Cooperativa Rocinha Recicla" class="wa-avatar">
+                    <span class="wa-status-dot"></span>
+                </div>
+                <div class="wa-info">
+                    <span class="wa-name">Rocinha Recicla</span>
+                    <span class="wa-status-text">Online agora</span>
+                </div>
+            </div>
+
+            <!-- Estado de Digitação -->
+            <div id="wa-typing" class="wa-typing">
+                <span></span><span></span><span></span>
+            </div>
+
+            <!-- Mensagem Real (Escondida inicialmente) -->
+            <div id="wa-real-message" class="wa-message-text" style="display: none;">
+                <p>Olá! Somos a <strong>Cooperativa Rocinha Recicla</strong>. Que tal agendar uma coleta ou conversar sobre parceria? Estamos disponíveis!</p>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Botão Flutuante Redondo -->
+    <a href="https://wa.me/5521997331428?text=Ol%C3%A1%2C%20vim%20atrav%C3%A9s%20do%20site%20e%20gostaria%20de%20uma%20informa%C3%A7%C3%A3o." class="wa-float-btn" target="_blank" rel="noopener noreferrer" id="wa-main-btn" role="button" aria-label="Falar pelo WhatsApp">
+        <i class="fa-brands fa-whatsapp"></i>
+        <span class="wa-badge" id="wa-notification">1</span>
+    </a>
+</div>
+
+<script src="cookie-banner.js" defer></script>
+<script>
+(function(){
+  const track    = document.getElementById('tcarousel-track');
+  const dotsWrap = document.getElementById('tcarousel-dots');
+  const btnPrev  = document.getElementById('tcarousel-prev');
+  const btnNext  = document.getElementById('tcarousel-next');
+  if(!track) return;
+
+  const total = track.children.length;
+  let page = 0;
+
+  function perView(){
+    if(window.innerWidth <= 560) return 1;
+    if(window.innerWidth <= 860) return 2;
+    return 3;
+  }
+
+  // Calcula o total de páginas avançando de 1 em 1 card para evitar slots vazios
+  function totalPages(){
+    const pv = perView();
+    return Math.max(1, total - pv + 1);
+  }
+
+  function buildDots(){
+    dotsWrap.innerHTML = '';
+    const n = totalPages();
+    for(let i = 0; i < n; i++){
+      const d = document.createElement('button');
+      d.className = 'tcarousel__dot';
+      d.setAttribute('aria-label', 'Página ' + (i+1));
+      d.addEventListener('click', () => goTo(i));
+      dotsWrap.appendChild(d);
+    }
+  }
+
+  function goTo(p){
+    const pv   = perView();
+    const pages = totalPages();
+    page = Math.max(0, Math.min(p, pages - 1));
+
+    const gap   = 24;
+    const cardW = (track.parentElement.parentElement.offsetWidth - gap * (pv - 1)) / pv;
+    
+    // Desloca de 1 em 1 card (multiplicando apenas por page, em vez de page * pv)
+    track.style.transform = `translateX(-${page * (cardW + gap)}px)`;
+
+    dotsWrap.querySelectorAll('.tcarousel__dot').forEach((d, i) =>
+      d.classList.toggle('is-active', i === page)
+    );
+
+    btnPrev.disabled = page === 0;
+    btnNext.disabled = page >= pages - 1;
+  }
+
+  btnPrev.addEventListener('click', () => goTo(page - 1));
+  btnNext.addEventListener('click', () => goTo(page + 1));
+
+  function startTimer(){
+    return setInterval(() => goTo(page >= totalPages() - 1 ? 0 : page + 1), 5000);
+  }
+
+  let timer = startTimer();
+  const carousel = track.closest('.tcarousel');
+  carousel.addEventListener('mouseenter', () => clearInterval(timer));
+  carousel.addEventListener('mouseleave', () => { timer = startTimer(); });
+
+  window.addEventListener('resize', () => { buildDots(); goTo(0); });
+
+  buildDots();
+  goTo(0);
+})();
+</script>
+</body>
+</html>
