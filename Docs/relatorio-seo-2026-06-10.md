@@ -1,6 +1,6 @@
 # Relatório SEO/GEO — Cooperativa Rocinha Recicla
 
-**Data da auditoria:** 10/06/2024
+**Data da auditoria:** 10/06/2026
 **Páginas analisadas:** `index.html`, `politica-de-privacidade.html`, `termos-e-condicoes.html`
 
 ---
