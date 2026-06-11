@@ -533,16 +533,37 @@ body.scroll-lock {
   background:rgba(255,255,255,.08);border-color:rgba(255,255,255,.3);
   transform:translateY(-3px);color:#fff;box-shadow:0 8px 25px rgba(0,0,0,.25);
 }
-.hero__chips{display:flex;flex-wrap:wrap;gap:.6rem}
-.hero__chips li{
-  font-family:var(--f-head);font-size:.78rem;font-weight:500;color:rgba(255,255,255,.85);
-  background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,.06);
-  border-radius:100px;padding:.45rem 1rem;backdrop-filter:blur(4px);
-  transition:all .3s var(--ease);
+.hero__chips {
+  display: flex;
+  flex-wrap: nowrap;
+  gap: .6rem;
+  overflow-x: auto;
+  width: 100%;
+  padding-bottom: 8px;
+  padding-top: 4px;
+  scrollbar-width: none; /* Oculta scrollbar no Firefox */
 }
-.hero__chips li:hover{
-  border-color:var(--verde);color:#fff;
-  background:rgba(58,125,68,.08);transform:translateY(-1px);
+.hero__chips::-webkit-scrollbar {
+  display: none; /* Oculta scrollbar no Chrome, Safari e Edge */
+}
+.hero__chips li {
+  flex-shrink: 0;
+  font-family: var(--f-head);
+  font-size: .78rem;
+  font-weight: 500;
+  color: rgba(255,255,255,.85);
+  background: rgba(255,255,255,.03);
+  border: 1px solid rgba(255,255,255,.06);
+  border-radius: 100px;
+  padding: .45rem 1rem;
+  backdrop-filter: blur(4px);
+  transition: all .3s var(--ease);
+}
+.hero__chips li:hover {
+  border-color: var(--verde);
+  color: #fff;
+  background: rgba(58, 125, 68, 0.08);
+  transform: translateY(-1px);
 }
 .hero__br-desktop {
   display: block;
@@ -3772,6 +3793,7 @@ body.scroll-lock {
   .ck-modal__box { max-width: 100%; border-radius: var(--ck-radius) var(--ck-radius) 0 0; }
   .ck-modal__footer { flex-direction: column; }
   .ck-modal__footer .ck-btn { width: 100%; }
+  .hero__chips li { font-size: .68rem; padding: .38rem .8rem; }
 }
 
 @media(prefers-reduced-motion: reduce) {
@@ -3811,6 +3833,11 @@ body.scroll-lock {
   .nav__burger{display:none}
   .hero{min-height:75vh}
   .hero__text{padding:var(--sp-6) 0;max-width:720px}
+  .hero__chips {
+    flex-wrap: wrap;
+    overflow-x: visible;
+    padding-bottom: 0;
+  }
   .hero__br-desktop{display:none}
   .location {
     padding: clamp(6rem, 10vw, 9rem) var(--sp-4);
