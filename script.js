@@ -293,38 +293,85 @@
     const badge = document.getElementById('wa-notification');
     const closeBtn = document.getElementById('wa-close-btn');
     const mainBtn = document.getElementById('wa-main-btn');
+    const thirdSection = document.getElementById('impacto'); // Terceira seção da página (excluindo a Hero, inicia em #problema)
 
-    if (!bubble) return;
+    if (!bubble || !thirdSection) return;
 
-    // Mostrar o balão após 6 segundos
-    setTimeout(() => {
+    let hasShown = false;
+    let autoCloseTimeout = null;
+    let typingTimeout = null;
+
+    // Detecta quando a terceira seção (Impacto) entra na tela para exibir o balão
+    if ('IntersectionObserver' in window) {
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting && !hasShown) {
+            hasShown = true;
+            showWaBubble();
+            observer.unobserve(thirdSection);
+          }
+        });
+      }, { threshold: 0.1 });
+      observer.observe(thirdSection);
+    } else {
+      // Fallback para navegadores antigos (6 segundos de espera)
+      setTimeout(showWaBubble, 6000);
+    }
+
+    function showWaBubble() {
+      // Abre o balão
       bubble.classList.add('show');
 
-      // Simular digitação por 2.5 segundos antes de mostrar a mensagem
-      setTimeout(() => {
-        if (typing) typing.style.display = 'none';
-        if (realMessage) {
+      // Simula digitação por 2 segundos antes de exibir o texto real
+      typingTimeout = setTimeout(() => {
+        if (typing) {
+          typing.classList.add('wa-fade-out');
+          // Aguarda o término do fade-out do indicador de digitação antes de ocultá-lo e exibir a mensagem real
+          setTimeout(() => {
+            typing.style.display = 'none';
+            if (realMessage) {
+              realMessage.style.display = 'block';
+              realMessage.classList.add('wa-fade-in-up');
+            }
+          }, 300);
+        } else if (realMessage) {
           realMessage.style.display = 'block';
-          realMessage.style.animation = 'wa-typing-ani 0.4s ease';
+          realMessage.classList.add('wa-fade-in-up');
         }
-      }, 2500);
-    }, 6000);
+      }, 2000);
 
-    // Fechar balão
+      // Fica visível por 10 segundos e depois desaparece automaticamente
+      autoCloseTimeout = setTimeout(() => {
+        bubble.classList.remove('show');
+        // Exibe a notificação com badge de 1 após o fechamento para engajamento sutil
+        setTimeout(() => {
+          if (badge) badge.classList.add('show');
+        }, 1500);
+      }, 10000);
+    }
+
+    function cleanupTimeouts() {
+      if (typingTimeout) clearTimeout(typingTimeout);
+      if (autoCloseTimeout) clearTimeout(autoCloseTimeout);
+    }
+
+    // Fechar balão manualmente
     if (closeBtn) {
       closeBtn.addEventListener('click', (e) => {
         e.preventDefault();
+        cleanupTimeouts();
         bubble.classList.remove('show');
-        // Mostrar notificação após fechar para manter engajamento
+        // Mostrar notificação após fechar
         setTimeout(() => {
           if (badge) badge.classList.add('show');
         }, 2000);
       });
     }
 
-    // Ao clicar no botão, remove tudo
+    // Ao clicar no botão flutuante, remove tudo
     if (mainBtn) {
       mainBtn.addEventListener('click', () => {
+        cleanupTimeouts();
         bubble.classList.remove('show');
         if (badge) badge.classList.remove('show');
       });
