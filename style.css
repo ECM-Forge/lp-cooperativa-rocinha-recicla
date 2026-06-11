@@ -2546,13 +2546,18 @@ body.scroll-lock {
 }
 .tcarousel__btn:disabled{ opacity:.25;cursor:default;transform:none }
 .tcarousel__dots{ display:flex;gap:.6rem;align-items:center }
-.tcarousel__dot{
-  width:7px;height:7px;border-radius:50%;
-  background:rgba(255,255,255,.25);
-  border:none;cursor:pointer;padding:0;
-  transition:background .3s ease,transform .3s ease;
+.tcarousel__dot {
+  width: 44px;
+  height: 44px;
+  padding: 18.5px;
+  background-clip: content-box !important;
+  background-color: rgba(255,255,255,.25);
+  border-radius: 50%;
+  border: none;
+  cursor: pointer;
+  transition: background-color .3s ease, transform .3s ease;
 }
-.tcarousel__dot.is-active{ background:var(--verde);transform:scale(1.4) }
+.tcarousel__dot.is-active{ background-color:var(--verde);transform:scale(1.4) }
 
 @media(max-width:860px){
   .tcarousel__track .tcard{ flex:0 0 calc((100% - 1.5rem) / 2) }
@@ -3548,18 +3553,22 @@ body.scroll-lock {
 .ck-btn--primary:hover { background: var(--ck-accent-dark); transform: translateY(-1px); }
 .ck-btn--outline {
   background: transparent;
-  border: 1px solid rgba(255,255,255,0.14);
-  color: rgba(255,255,255,0.45);
+  border: 1px solid rgba(255,255,255,0.35);
+  color: rgba(255,255,255,0.78);
 }
-.ck-btn--outline:hover { border-color: rgba(255,255,255,0.30); color: rgba(255,255,255,0.70); }
+.ck-btn--outline:hover { border-color: rgba(255,255,255,0.55); color: rgba(255,255,255,0.95); }
 .ck-btn--ghost {
   background: transparent;
-  color: rgba(255,255,255,0.30);
+  color: rgba(255,255,255,0.78);
   border: none;
   padding: 0.42rem 0.5rem;
   text-decoration: underline;
   text-underline-offset: 2px;
   font-size: 0.74rem;
+  transition: color var(--ck-transition);
+}
+.ck-btn--ghost:hover {
+  color: rgba(255,255,255,0.95);
 }
 
 .ck-modal {

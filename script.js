@@ -32,23 +32,19 @@
 
   const progressBar = document.getElementById("nav-progress");
   if (progressBar) {
+    let ticking = false;
     window.addEventListener("scroll", () => {
-      const winScroll = document.documentElement.scrollTop || document.body.scrollTop;
-      const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
-      const scrolled = height > 0 ? (winScroll / height) * 100 : 0;
-      progressBar.style.width = scrolled + "%";
+      if (!ticking) {
+        window.requestAnimationFrame(() => {
+          const winScroll = document.documentElement.scrollTop || document.body.scrollTop;
+          const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+          const scrolled = height > 0 ? (winScroll / height) * 100 : 0;
+          progressBar.style.width = scrolled + "%";
+          ticking = false;
+        });
+        ticking = true;
+      }
     }, { passive: true });
-  }
-
-  /* ---------- 3. Hero: revela no load ---------- */
-  window.addEventListener("load", () => {
-    document.querySelectorAll('[data-anim="hero"],[data-anim="hero-img"]').forEach((el) => {
-      el.classList.add("is-visible");
-    });
-  });
-  // segurança: caso 'load' já tenha disparado
-  if (document.readyState === "complete") {
-    document.querySelectorAll('[data-anim="hero"],[data-anim="hero-img"]').forEach((el) => el.classList.add("is-visible"));
   }
 
   /* ---------- 4. Reveal genérico (serviços, tiles) com stagger ---------- */

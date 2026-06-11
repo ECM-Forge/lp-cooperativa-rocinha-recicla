@@ -7,8 +7,8 @@
 <meta name="description" content="Cooperativa de reciclagem, coleta seletiva e logística reversa na Rocinha, Rio de Janeiro. Desde 2017 transformando resíduos em renda e inclusão social.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+<link rel="preload" href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
+<noscript><link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet"></noscript>
 <link rel="shortcut icon" href="Assets/favicon-rocinha-recicla.ico" type="image/x-icon">
 <link rel="canonical" href="https://rocinharecicla.com.br/">
 
@@ -256,7 +256,7 @@
 <!-- ============ HERO ============ -->
 <main>
 <section class="hero" id="inicio">
-  <div class="hero__video-wrapper" data-anim="hero-img">
+  <div class="hero__video-wrapper">
     <video class="hero__bg-video" autoplay loop muted playsinline>
       <source src="https://files.catbox.moe/ahf5e8.mp4" type="video/mp4">
     </video>
@@ -265,19 +265,19 @@
 
   <div class="hero__inner">
     <div class="hero__text">
-      <p class="kicker" data-anim="hero" style="--d:0ms">Desde 2017 • Rocinha • Rio de Janeiro</p>
-      <h1 class="hero__title" data-anim="hero" style="--d:200ms">
+      <p class="kicker">Desde 2017 • Rocinha • Rio de Janeiro</p>
+      <h1 class="hero__title">
         Transformando <span class="hl">Resíduos</span><br class="hero__br-desktop">em Oportunidade
       </h1>
-      <p class="hero__sub" data-anim="hero" style="--d:400ms">
+      <p class="hero__sub">
         Da Rocinha para o mundo. Coleta seletiva, triagem e logística reversa que geram
         impacto ambiental real, renda e inclusão social.
       </p>
-      <div class="hero__actions" data-anim="hero" style="--d:600ms">
-        <a class="btn btn--green" href="https://wa.me/5521997331428?text=Ol%C3%A1%2C%20vim%20atrav%C3%A9s%20do%20site%20e%20gostaria%20de%20uma%20informa%C3%A7%C3%A3o." target="_blank" rel="noopener">Agende sua coleta</a>
+      <div class="hero__actions">
+        <a class="btn btn--green" href="https://wa.me/5521997331428?text=Ol%C3%A1%2C%20vim%20atrav%C3%A9s%20do%20site%20e%20gostaria%20de%20uma%20informa%C3%A7%C3%A3o." target="_blank" rel="noopener noreferrer">Agende sua coleta</a>
         <a class="btn btn--ghost" href="#servicos">Nossos serviços</a>
       </div>
-      <ul class="hero__chips" data-anim="hero" style="--d:750ms">
+      <ul class="hero__chips">
         <li>Coleta Seletiva</li>
         <li>Logística Reversa</li>
         <li>Documentação Ambiental</li>
@@ -451,7 +451,7 @@
         </div>
       </div>
       <p class="gallery__body">Nosso galpão na Rocinha opera com rastreabilidade total. Cada material coletado passa por triagem técnica, prensagem e destinação correta — gerando CDF, relatórios de ESG e, acima de tudo, dignidade para quem trabalha.</p>
-      <a href="https://wa.me/5521997331428?text=Ol%C3%A1%2C%20vim%20atrav%C3%A9s%20do%20site%20e%20gostaria%20de%20saber%20sobre%20Parceria." target="_blank" rel="noopener" class="gallery__cta">Quero ser parceiro</a>
+      <a href="https://wa.me/5521997331428?text=Ol%C3%A1%2C%20vim%20atrav%C3%A9s%20do%20site%20e%20gostaria%20de%20saber%20sobre%20Parceria." target="_blank" rel="noopener noreferrer" class="gallery__cta">Quero ser parceiro</a>
     </div>
 
     <!-- Imagens à direita — alinhamento mantido -->
@@ -461,7 +461,7 @@
       <figure class="gcard gcard--land" data-anim="tile">
         <div class="gcard__img-wrap">
           <img src="Assets/logistica-reversa-embalagens-empresas.webp"
-               alt="Logística reversa de embalagens coletadas de empresas parceiras" loading="lazy">
+               alt="Logística reversa de embalagens coletadas de empresas parceiras" width="600" height="338" loading="lazy">
         </div>
         <figcaption>
           <span class="gcard__tag">Logística reversa</span>
@@ -472,7 +472,7 @@
       <figure class="gcard gcard--land" data-anim="tile">
         <div class="gcard__img-wrap">
           <img src="Assets/acao-educacao-ambiental-rocinha.webp"
-               alt="Ação de educação ambiental comunitária na Rocinha" loading="lazy">
+               alt="Ação de educação ambiental comunitária na Rocinha" width="600" height="338" loading="lazy">
         </div>
         <figcaption>
           <span class="gcard__tag">Educação ambiental</span>
@@ -484,7 +484,7 @@
       <figure class="gcard gcard--port" data-anim="tile">
         <div class="gcard__img-wrap">
           <img src="Assets/triagem-garrafas-pet-transparentes-rocinha.webp"
-               alt="Triagem manual de garrafas PET transparentes na Cooperativa Rocinha Recicla" loading="lazy">
+               alt="Triagem manual de garrafas PET transparentes na Cooperativa Rocinha Recicla" width="600" height="800" loading="lazy">
         </div>
         <figcaption>
           <span class="gcard__tag">Triagem</span>
@@ -495,7 +495,7 @@
       <figure class="gcard gcard--port" data-anim="tile">
         <div class="gcard__img-wrap">
           <img src="Assets/galpao-triagem-cooperativa-rocinha-recicla.webp"
-               alt="Galpão principal de triagem da Cooperativa Rocinha Recicla" loading="lazy">
+               alt="Galpão principal de triagem da Cooperativa Rocinha Recicla" width="600" height="800" loading="lazy">
         </div>
         <figcaption>
           <span class="gcard__tag">Polo de triagem</span>
@@ -679,7 +679,7 @@
     <article class="fcard" data-anim="tile">
       <div class="fcard__img-wrap">
         <img src="Assets/fardo-embalagens-papelao-reciclagem-rocinha.webp"
-             alt="Fardo de embalagens e papelão prensado" loading="lazy">
+             alt="Fardo de embalagens e papelão prensado" width="600" height="338" loading="lazy">
       </div>
       <div class="fcard__content" data-num="01">
         <span class="fcard__tag">Papelão &amp; Papel</span>
@@ -707,7 +707,7 @@
     <article class="fcard" data-anim="tile" style="--delay:.08s">
       <div class="fcard__img-wrap">
         <img src="Assets/fardo-garrafas-pet-coloridas-prensadas-rocinha.webp"
-             alt="Fardo de garrafas PET coloridas compactadas" loading="lazy">
+             alt="Fardo de garrafas PET coloridas compactadas" width="600" height="338" loading="lazy">
       </div>
       <div class="fcard__content" data-num="02">
         <span class="fcard__tag">PET Misto</span>
@@ -735,7 +735,7 @@
     <article class="fcard" data-anim="tile" style="--delay:.16s">
       <div class="fcard__img-wrap">
         <img src="Assets/fardo-plastico-hdpe-azul-reciclado-rocinha.webp"
-             alt="Fardo de plástico HDPE azul enfardado" loading="lazy">
+             alt="Fardo de plástico HDPE azul enfardado" width="600" height="338" loading="lazy">
       </div>
       <div class="fcard__content" data-num="03">
         <span class="fcard__tag">HDPE — Rígido</span>
@@ -763,7 +763,7 @@
     <article class="fcard" data-anim="tile" style="--delay:.24s">
       <div class="fcard__img-wrap">
         <img src="Assets/fardo-plasticos-vermelhos-prensados-rocinha.webp"
-             alt="Fardo de plásticos vermelhos domésticos triados" loading="lazy">
+             alt="Fardo de plásticos vermelhos domésticos triados" width="600" height="338" loading="lazy">
       </div>
       <div class="fcard__content" data-num="04">
         <span class="fcard__tag">PP / PS — Utensílios</span>
@@ -928,7 +928,7 @@
         <button class="tcarousel__btn" id="tcarousel-prev" aria-label="Anterior">
           <svg width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M12 4l-6 6 6 6" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
         </button>
-        <div class="tcarousel__dots" id="tcarousel-dots"></div>
+        <div class="tcarousel__dots" id="tcarousel-dots" role="tablist" aria-label="Depoimentos"></div>
         <button class="tcarousel__btn" id="tcarousel-next" aria-label="Próximo">
           <svg width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M8 4l6 6-6 6" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
         </button>
@@ -996,7 +996,7 @@
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
         </div>
         <h3>Endereço</h3>
-        <p><a href="https://www.google.com/maps/dir//Complexo+Esportivo+da+Rocinha+-+R.+Bertha+Lutz,+84+-+Rocinha,+Rio+de+Janeiro+-+RJ,+22450-290" target="_blank" rel="noopener">Rua Bertha Lutz, 84<br>Rocinha, Rio de Janeiro — RJ</a></p>
+        <p><a href="https://www.google.com/maps/dir//Complexo+Esportivo+da+Rocinha+-+R.+Bertha+Lutz,+84+-+Rocinha,+Rio+de+Janeiro+-+RJ,+22450-290" target="_blank" rel="noopener noreferrer">Rua Bertha Lutz, 84<br>Rocinha, Rio de Janeiro — RJ</a></p>
       </div>
       
       <div class="location__info-col">
@@ -1005,7 +1005,7 @@
         </div>
         <h3>Fale Conosco</h3>
         <p>
-          <a href="https://wa.me/5521997331428?text=Ol%C3%A1%2C%20vim%20atrav%C3%A9s%20do%20site%20e%20gostaria%20de%20uma%20informa%C3%A7%C3%A3o." target="_blank" rel="noopener" class="hl-link">(21) 99733-1428 (WhatsApp)</a><br>
+          <a href="https://wa.me/5521997331428?text=Ol%C3%A1%2C%20vim%20atrav%C3%A9s%20do%20site%20e%20gostaria%20de%20uma%20informa%C3%A7%C3%A3o." target="_blank" rel="noopener noreferrer" class="hl-link">(21) 99733-1428 (WhatsApp)</a><br>
           <a href="mailto:rocinharecicla@gmail.com">rocinharecicla@gmail.com</a>
         </p>
       </div>
@@ -1027,7 +1027,7 @@
         loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
       
       <!-- Botão Flutuante Elegante -->
-      <a class="location__map-btn" href="https://www.google.com/maps/dir//Complexo+Esportivo+da+Rocinha+-+R.+Bertha+Lutz,+84+-+Rocinha,+Rio+de+Janeiro+-+RJ,+22450-290" target="_blank" rel="noopener">
+      <a class="location__map-btn" href="https://www.google.com/maps/dir//Complexo+Esportivo+da+Rocinha+-+R.+Bertha+Lutz,+84+-+Rocinha,+Rio+de+Janeiro+-+RJ,+22450-290" target="_blank" rel="noopener noreferrer">
         <span>Traçar rota no Google Maps</span>
         <svg viewBox="0 0 20 20" fill="currentColor" width="16" height="16"><path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd" /></svg>
       </a>
@@ -1245,10 +1245,10 @@
     
     <div class="drawer__footer">
       <div class="drawer__social" style="--i: 6">
-        <a href="https://wa.me/5521997331428?text=Ol%C3%A1%2C%20vim%20atrav%C3%A9s%20do%20site%20e%20gostaria%20de%20uma%20informa%C3%A7%C3%A3o." target="_blank" rel="noopener">
+        <a href="https://wa.me/5521997331428?text=Ol%C3%A1%2C%20vim%20atrav%C3%A9s%20do%20site%20e%20gostaria%20de%20uma%20informa%C3%A7%C3%A3o." target="_blank" rel="noopener noreferrer">
           <span class="drawer__social-icon">💬</span> (21) 99733-1428
         </a>
-        <a href="https://www.instagram.com/rocinharecicla/" target="_blank" rel="noopener">
+        <a href="https://www.instagram.com/rocinharecicla/" target="_blank" rel="noopener noreferrer">
           <span class="drawer__social-icon">📷</span> @rocinharecicla
         </a>
       </div>
@@ -1307,7 +1307,7 @@
               <h3 class="ck-category__name">Funcional</h3>
               <p class="ck-category__desc">Permitem funcionalidades como compartilhamento em redes sociais e recursos de terceiros.</p>
             </div>
-            <label class="ck-toggle" aria-label="Ativar cookies funcionais">
+            <label class="ck-toggle" for="ck-functional" aria-label="Ativar cookies funcionais">
               <input type="checkbox" id="ck-functional" name="functional">
               <span class="ck-toggle__slider"></span>
             </label>
@@ -1319,7 +1319,7 @@
               <h3 class="ck-category__name">Analítico</h3>
               <p class="ck-category__desc">Usados para entender como os visitantes interagem com o site.</p>
             </div>
-            <label class="ck-toggle" aria-label="Ativar cookies analíticos">
+            <label class="ck-toggle" for="ck-analytics" aria-label="Ativar cookies analíticos">
               <input type="checkbox" id="ck-analytics" name="analytics">
               <span class="ck-toggle__slider"></span>
             </label>
@@ -1331,7 +1331,7 @@
               <h3 class="ck-category__name">Desempenho</h3>
               <p class="ck-category__desc">Analisam índices de desempenho do site para oferecer melhor experiência.</p>
             </div>
-            <label class="ck-toggle" aria-label="Ativar cookies de desempenho">
+            <label class="ck-toggle" for="ck-performance" aria-label="Ativar cookies de desempenho">
               <input type="checkbox" id="ck-performance" name="performance">
               <span class="ck-toggle__slider"></span>
             </label>
@@ -1343,7 +1343,7 @@
               <h3 class="ck-category__name">Publicidade</h3>
               <p class="ck-category__desc">Entregam anúncios personalizados com base nas páginas visitadas anteriormente.</p>
             </div>
-            <label class="ck-toggle" aria-label="Ativar cookies de publicidade">
+            <label class="ck-toggle" for="ck-advertising" aria-label="Ativar cookies de publicidade">
               <input type="checkbox" id="ck-advertising" name="advertising">
               <span class="ck-toggle__slider"></span>
             </label>
@@ -1365,13 +1365,15 @@
     <!-- Balão de Mensagem Glassmorphism -->
     <div id="wa-message-bubble" class="wa-bubble">
         <button class="wa-close" id="wa-close-btn" aria-label="Fechar">
-            <i class="fa-solid fa-xmark"></i>
+            <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" aria-hidden="true">
+                <path d="M18 6L6 18M6 6l12 12"/>
+            </svg>
         </button>
         
         <div class="wa-content">
             <div class="wa-header">
                 <div class="wa-avatar-wrapper">
-                    <img src="Assets/logo-cooperativa-rocinha-recicla.webp" alt="Cooperativa Rocinha Recicla" class="wa-avatar">
+                    <img src="Assets/logo-cooperativa-rocinha-recicla.webp" alt="Cooperativa Rocinha Recicla" width="45" height="45" class="wa-avatar" loading="lazy">
                     <span class="wa-status-dot"></span>
                 </div>
                 <div class="wa-info">
@@ -1394,7 +1396,9 @@
     
     <!-- Botão Flutuante Redondo -->
     <a href="https://wa.me/5521997331428?text=Ol%C3%A1%2C%20vim%20atrav%C3%A9s%20do%20site%20e%20gostaria%20de%20uma%20informa%C3%A7%C3%A3o." class="wa-float-btn" target="_blank" rel="noopener noreferrer" id="wa-main-btn" role="button" aria-label="Falar pelo WhatsApp">
-        <i class="fa-brands fa-whatsapp"></i>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" width="30" height="30" fill="currentColor" aria-hidden="true">
+            <path d="M380.9 97.1C339 55.1 283.2 32 223.9 32c-122.4 0-222 99.6-222 222 0 39.1 10.2 77.3 29.6 111L0 480l117.7-30.9c32.4 17.7 68.9 27 106.1 27h.1c122.3 0 224.1-99.6 224.1-222 0-59.3-25.2-115-67.1-157zm-157 341.6c-33.2 0-65.7-8.9-94-25.7l-6.7-4-69.8 18.3L72 359.2l-4.4-7c-18.5-29.4-28.2-63.3-28.2-98.2 0-101.7 82.8-184.5 184.6-184.5 49.3 0 95.6 19.2 130.4 54.1 34.8 34.9 56.2 81.2 56.1 130.5 0 101.8-84.9 184.6-186.6 184.6zm101.2-138.2c-5.5-2.8-32.8-16.2-37.9-18-5.1-1.9-8.8-2.8-12.5 2.8-3.7 5.6-14.3 18-17.6 21.8-3.2 3.7-6.5 4.2-12 1.4-32.6-16.3-54-29.1-75.5-66-5.7-9.8 5.7-9.1 16.3-30.3 1.8-3.7.9-6.9-.5-9.7-1.4-2.8-12.5-30.1-17.1-41.2-4.5-10.8-9.1-9.3-12.5-9.5-3.2-.2-6.9-.2-10.6-.2-3.7 0-9.7 1.4-14.8 6.9-5.1 5.6-19.4 19-19.4 46.3 0 27.3 19.9 53.7 22.6 57.4 2.8 3.7 39.1 59.7 94.8 83.8 35.2 15.2 49 16.5 66.6 13.9 10.7-1.6 32.8-13.4 37.4-26.4 4.6-13 4.6-24.1 3.2-26.4-1.3-2.5-5-3.9-10.5-6.6z"/>
+        </svg>
         <span class="wa-badge" id="wa-notification">1</span>
     </a>
 </div>
@@ -1430,7 +1434,9 @@
     for(let i = 0; i < n; i++){
       const d = document.createElement('button');
       d.className = 'tcarousel__dot';
-      d.setAttribute('aria-label', 'Página ' + (i+1));
+      d.setAttribute('role', 'tab');
+      d.setAttribute('aria-selected', i === 0 ? 'true' : 'false');
+      d.setAttribute('aria-label', 'Ir para depoimento ' + (i+1));
       d.addEventListener('click', () => goTo(i));
       dotsWrap.appendChild(d);
     }
@@ -1447,9 +1453,11 @@
     // Desloca de 1 em 1 card (multiplicando apenas por page, em vez de page * pv)
     track.style.transform = `translateX(-${page * (cardW + gap)}px)`;
 
-    dotsWrap.querySelectorAll('.tcarousel__dot').forEach((d, i) =>
-      d.classList.toggle('is-active', i === page)
-    );
+    dotsWrap.querySelectorAll('.tcarousel__dot').forEach((d, i) => {
+      const isActive = i === page;
+      d.classList.toggle('is-active', isActive);
+      d.setAttribute('aria-selected', isActive ? 'true' : 'false');
+    });
 
     btnPrev.disabled = page === 0;
     btnNext.disabled = page >= pages - 1;
