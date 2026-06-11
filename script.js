@@ -333,6 +333,166 @@
 
   initWaPremium();
 
+  /* ---------- Vídeos: play/pause com botão overlay ---------- */
+  const vcards = document.querySelectorAll('.vcard');
+  console.log('Vídeos encontrados:', vcards.length);
+  
+  const modal = document.getElementById('video-modal');
+  const modalVideo = document.getElementById('vmodal-video');
+  const modalClose = document.getElementById('video-modal-close');
+  const modalOverlay = document.getElementById('video-modal-overlay');
+  let activeCardVideo = null;
+
+  vcards.forEach(card => {
+    const video = card.querySelector('.vcard__video');
+    const btn   = card.querySelector('.vcard__play');
+    const media = card.querySelector('.vcard__media');
+    const muteBtn = card.querySelector('.vcard__btn-mute');
+    const expandBtn = card.querySelector('.vcard__btn-expand');
+    if (!video || !btn || !media) return;
+
+    // Sincronizar o estado visual inicial do botão de mute
+    if (muteBtn) {
+      muteBtn.classList.toggle('is-unmuted', !video.muted);
+    }
+
+    const play = () => {
+      // Pausar outros vídeos antes (experiência de foco único)
+      document.querySelectorAll('.vcard__video').forEach(v => {
+        if (v !== video && !v.paused) {
+          v.pause();
+          const otherMedia = v.closest('.vcard__media');
+          if (otherMedia) otherMedia.classList.remove('is-playing');
+          const otherCard = v.closest('.vcard');
+          if (otherCard) {
+            otherCard.classList.remove('is-playing');
+            otherCard.classList.remove('is-muted');
+          }
+        }
+      });
+
+      // Ativar áudio por padrão ao dar play (interação ativa do usuário)
+      video.muted = false;
+      if (muteBtn) {
+        muteBtn.classList.add('is-unmuted');
+      }
+
+      video.play().then(() => {
+        media.classList.add('is-playing');
+        card.classList.add('is-playing');
+        card.classList.toggle('is-muted', video.muted);
+        console.log('Vídeo iniciado com som:', video.querySelector('source')?.src);
+      }).catch((err) => {
+        console.error('Erro ao reproduzir vídeo:', err);
+      });
+    };
+
+    const pause = () => {
+      video.pause();
+      media.classList.remove('is-playing');
+      card.classList.remove('is-playing');
+      card.classList.remove('is-muted');
+    };
+
+    btn.addEventListener('click', (e) => {
+      e.stopPropagation();
+      if (video.paused) play(); else pause();
+    });
+
+    // Pausar ao clicar no vídeo (quando playing)
+    video.addEventListener('click', (e) => {
+      e.stopPropagation();
+      if (!video.paused) pause();
+    });
+
+    // Controle de volume/mute
+    if (muteBtn) {
+      muteBtn.addEventListener('click', (e) => {
+        e.stopPropagation(); // Prevenir pausar do vídeo
+        video.muted = !video.muted;
+        muteBtn.classList.toggle('is-unmuted', !video.muted);
+        card.classList.toggle('is-muted', video.muted);
+      });
+    }
+
+    // Controle de tela cheia / expandir (Lightbox Modal)
+    if (expandBtn && modal && modalVideo) {
+      expandBtn.addEventListener('click', (e) => {
+        e.stopPropagation(); // Prevenir pausar do vídeo
+        
+        activeCardVideo = video;
+        
+        // Pausar o vídeo do card atual para transferir
+        video.pause();
+        media.classList.remove('is-playing');
+        card.classList.remove('is-playing');
+        card.classList.remove('is-muted');
+
+        // Configurar o vídeo do modal
+        const srcEl = video.querySelector('source');
+        if (srcEl) {
+          modalVideo.src = srcEl.src;
+        }
+        modalVideo.currentTime = video.currentTime;
+        modalVideo.muted = video.muted;
+        
+        // Exibir o modal
+        modal.classList.add('is-active');
+        modal.setAttribute('aria-hidden', 'false');
+        document.body.classList.add('scroll-lock');
+
+        // Iniciar reprodução no modal
+        modalVideo.play().catch(err => console.error('Erro ao iniciar vídeo no modal:', err));
+      });
+    }
+
+    // Pausar ao clicar na área do media (quando playing, ignorando cliques nos controles)
+    media.addEventListener('click', (e) => {
+      if (e.target.closest('.vcard__controls')) return;
+      if (e.target === media || e.target === video) {
+        if (!video.paused) pause();
+      }
+    });
+
+    // Lazy play/pause com IntersectionObserver
+    if ('IntersectionObserver' in window) {
+      const io = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (!entry.isIntersecting && !video.paused) {
+            pause();
+          }
+        });
+      }, { threshold: 0.2 });
+      io.observe(card);
+    }
+  });
+
+  // Fechamento do Lightbox Modal
+  function closeModal() {
+    if (!modal || !modalVideo) return;
+    
+    modalVideo.pause();
+    
+    if (activeCardVideo) {
+      activeCardVideo.currentTime = modalVideo.currentTime;
+      activeCardVideo = null;
+    }
+    
+    modal.classList.remove('is-active');
+    modal.setAttribute('aria-hidden', 'true');
+    document.body.classList.remove('scroll-lock');
+    modalVideo.src = '';
+  }
+
+  if (modalClose) modalClose.addEventListener('click', closeModal);
+  if (modalOverlay) modalOverlay.addEventListener('click', closeModal);
+  
+  window.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape' && modal && modal.classList.contains('is-active')) {
+      closeModal();
+    }
+  });
+
   /* ---------- Serviços: expandir/recolher ---------- */
   const servicesToggle = document.getElementById("servicesToggle");
   const servicesExtra  = document.getElementById("servicesExtra");

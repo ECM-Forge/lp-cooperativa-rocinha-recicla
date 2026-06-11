@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Teste de Vídeos</title>
+    <style>
+        body { font-family: Arial, sans-serif; padding: 20px; background: #1a1a1a; color: white; }
+        .video-test { margin: 20px 0; padding: 20px; background: #2a2a2a; border-radius: 8px; }
+        video { max-width: 300px; height: auto; display: block; margin: 10px 0; }
+        .success { color: #4caf50; }
+        .error { color: #f44336; }
+        button { padding: 10px 20px; margin: 5px; cursor: pointer; background: #4caf50; color: white; border: none; border-radius: 4px; }
+        button:hover { background: #45a049; }
+    </style>
+</head>
+<body>
+    <h1>Teste de Vídeos - Cooperativa Rocinha Recicla</h1>
+    
+    <div class="video-test">
+        <h2>Vídeo 1: Triagem</h2>
+        <video id="video1" muted loop playsinline preload="metadata" poster="Assets/triagem-garrafas-pet-transparentes-rocinha.webp">
+            <source src="Assets/video-triagem-materiais-reciclaveis-rocinha.mp4" type="video/mp4">
+        </video>
+        <div id="status1"></div>
+        <button onclick="testVideo('video1', 'status1')">Testar Vídeo</button>
+    </div>
+
+    <div class="video-test">
+        <h2>Vídeo 2: Coleta</h2>
+        <video id="video2" muted loop playsinline preload="metadata" poster="Assets/acao-educacao-ambiental-rocinha.webp">
+            <source src="Assets/video-coleta-seletiva-comunidade-rocinha.mp4" type="video/mp4">
+        </video>
+        <div id="status2"></div>
+        <button onclick="testVideo('video2', 'status2')">Testar Vídeo</button>
+    </div>
+
+    <div class="video-test">
+        <h2>Vídeo 3: Prensagem</h2>
+        <video id="video3" muted loop playsinline preload="metadata" poster="Assets/fardo-garrafas-pet-coloridas-prensadas-rocinha.webp">
+            <source src="Assets/video-prensagem-fardos-reciclaveis-rocinha.mp4" type="video/mp4">
+        </video>
+        <div id="status3"></div>
+        <button onclick="testVideo('video3', 'status3')">Testar Vídeo</button>
+    </div>
+
+    <div class="video-test">
+        <h2>Vídeo 4: Operação</h2>
+        <video id="video4" muted loop playsinline preload="metadata" poster="Assets/galpao-triagem-cooperativa-rocinha-recicla.webp">
+            <source src="Assets/video-processo-reciclagem-galpao-rocinha.mp4" type="video/mp4">
+        </video>
+        <div id="status4"></div>
+        <button onclick="testVideo('video4', 'status4')">Testar Vídeo</button>
+    </div>
+
+    <script>
+        function testVideo(videoId, statusId) {
+            const video = document.getElementById(videoId);
+            const status = document.getElementById(statusId);
+            
+            console.log('Testando vídeo:', videoId);
+            console.log('Source:', video.querySelector('source')?.src);
+            console.log('Ready state:', video.readyState);
+            console.log('Network state:', video.networkState);
+            console.log('Paused:', video.paused);
+            console.log('Ended:', video.ended);
+            console.log('Error:', video.error);
+            
+            video.play().then(() => {
+                status.innerHTML = '<span class="success">✓ Vídeo reproduzindo com sucesso!</span>';
+                status.innerHTML += '<br>ReadyState: ' + video.readyState;
+                status.innerHTML += '<br>CurrentTime: ' + video.currentTime.toFixed(2);
+                setTimeout(() => {
+                    video.pause();
+                    status.innerHTML += '<br>✓ Vídeo pausado após 3 segundos';
+                }, 3000);
+            }).catch(err => {
+                status.innerHTML = '<span class="error">✗ Erro: ' + err.message + '</span>';
+                status.innerHTML += '<br>ReadyState: ' + video.readyState;
+                status.innerHTML += '<br>NetworkState: ' + video.networkState;
+                status.innerHTML += '<br>Error: ' + (video.error ? video.error.code : 'none');
+            });
+        }
+        
+        // Verificar se os vídeos estão carregados
+        window.addEventListener('load', () => {
+            document.querySelectorAll('video').forEach((video, index) => {
+                const status = document.getElementById('status' + (index + 1));
+                if (status) {
+                    status.innerHTML = 'ReadyState: ' + video.readyState + ' | NetworkState: ' + video.networkState;
+                    if (video.readyState >= 2) {
+                        status.innerHTML += ' <span class="success">(Pronto para reproduzir)</span>';
+                    } else {
+                        status.innerHTML += ' <span class="error">(Carregando...)</span>';
+                    }
+                }
+            });
+        });
+    </script>
+</body>
+</html>
