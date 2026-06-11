@@ -48,7 +48,7 @@
   }
 
   /* ---------- 4. Reveal genérico (serviços, tiles) com stagger ---------- */
-  const revealItems = document.querySelectorAll('[data-anim="service"],[data-anim="tile"]');
+  const revealItems = document.querySelectorAll('[data-anim="service"],[data-anim="tile"],[data-anim="hero"]');
   if ("IntersectionObserver" in window && !prefersReduced) {
     const io = new IntersectionObserver(
       (entries, obs) => {
