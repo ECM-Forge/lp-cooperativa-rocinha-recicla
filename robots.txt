@@ -1,0 +1,25 @@
+# robots.txt - Cooperativa Rocinha Recicla
+User-agent: *
+Allow: /
+
+# GEO / AI Web Crawlers Explicitly Allowed
+User-agent: GPTBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
+User-agent: Amazonbot
+Allow: /
+
+# Sitemap Location
+Sitemap: https://www.rocinharecicla.com.br/sitemap.xml
