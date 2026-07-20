@@ -1488,8 +1488,7 @@ body.scroll-lock {
   pointer-events: none;
 }
 
-/* Mostra os controles no hover ou enquanto o vídeo estiver tocando */
-.vcard__media:hover .vcard__controls,
+/* Mostra os controles (som e expandir) SOMENTE quando o vídeo estiver em execução */
 .vcard__media.is-playing .vcard__controls {
   opacity: 1;
   pointer-events: auto;
